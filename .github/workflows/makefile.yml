@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ locked_user.js ]
 
 jobs:
   build:
@@ -13,10 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: configure
-      run: ./configure
-      
+  
     - name: Install dependencies
       run: make
       
@@ -28,3 +25,9 @@ jobs:
       
     - name: locked_user.js
       run: make locked_user.js
+      
+    - name: systemwide_user.jss
+      run: make systemwide_user.js
+      
+    - name: policies.json
+      run: make policies.json
