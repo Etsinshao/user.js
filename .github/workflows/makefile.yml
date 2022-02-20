@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ locked_user.js ]
+    branches: [ master ]
 
 jobs:
   build:
