@@ -14,19 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
   
-    - name: Install dependencies
-      run: make
-      
-    - name: Run check
-      run: make check
-      
-    - name: Run distcheck
-      run: make distcheck
+
       
     - name: locked_user.js
       run: make locked_user.js
       
-    - name: systemwide_user.jss
+    - name: systemwide_user.js
       run: make systemwide_user.js
       
     - name: policies.json
