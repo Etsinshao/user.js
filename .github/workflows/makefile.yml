@@ -14,8 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
   
-
-      
     - name: locked_user.js
       run: make locked_user.js
       
@@ -25,5 +23,11 @@ jobs:
     - name: policies.json
       run: make policies.json
       
-    - name: cat
+    - name: cat locked_user.js
       run: cat locked_user.js
+      
+    - name: cat systemwide_user.js
+      run: cat systemwide_user.js
+      
+    - name: cat policies.json
+      run: cat policies.json
