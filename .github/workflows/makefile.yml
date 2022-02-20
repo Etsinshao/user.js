@@ -24,3 +24,6 @@ jobs:
       
     - name: policies.json
       run: make policies.json
+      
+    - name: cat
+      run: cat locked_user.js
